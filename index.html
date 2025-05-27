@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recursos Programación II</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="estilos.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" crossorigin="anonymous"/>
+  <style>
+   
+  </style>
+</head>
+<body class="container py-4">
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: var(--color-surface); border-bottom: 1px solid var(--color-border); box-shadow: var(--shadow-md);">
+  <div class="container-fluid">
+    <a class="navbar-brand typing-title" href="#" style="font-family: var(--font-mono); font-weight: 600; color: var(--color-secondary);">
+      <span class="brand-icon">📘</span>
+      <span class="brand-text">Programación II</span>
+      <span class="typing-cursor" style="color: var(--color-accent);">|</span>
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item clock-container pe-2">
+          <div class="digital-clock" style="font-family: var(--font-mono); color: var(--color-success); text-shadow: 0 0 5px rgba(0, 255, 157, 0.3); background-color: rgba(0, 0, 0, 0.2);">
+            <span id="clock-hours">00</span>:<span id="clock-minutes">00</span>:<span id="clock-seconds">00</span>
+          </div>
+        </li>
+        
+        <li class="nav-item"><a class="nav-link nav-custom-link" href="#intro">Introducción</a></li>
+        <li class="nav-item"><a class="nav-link nav-custom-link" href="#conversion">Conversión</a></li>
+        <li class="nav-item"><a class="nav-link nav-custom-link" href="#poo">POO</a></li>
+        <li class="nav-item"><a class="nav-link nav-custom-link" href="#faq">FAQ</a></li>
+        
+        <li class="nav-item ms-2">
+          <button class="btn btn-sm btn-theme-toggle" id="toggleTheme" style="font-family: var(--font-sans);">
+            <span class="theme-icon">🌙</span>
+            <span class="theme-text">Modo Oscuro</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<br/><br/><br/>
+<h1 class="text-center mb-5">Recursos de Clase – Programación II</h1>
+
+
+<!-- Introducción -->
+<div class="accordion-section">
+<div class="accordion-header" id="intro-header" onclick="toggleAccordion('intro')">
+  <i class="bi bi-journal-code me-2 text-primary"></i>Introducción a Java
+</div>
+  <div class="accordion-content" id="intro">
+    <div class="row">
+      <!-- Teoría -->
+      <div class="col-md-4 d-flex">
+        <div class="p-3 card-custom w-100">
+          <h5 class="mb-3 fw-bold">📘 Teoría</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a class="tema-link text-decoration-none" data-contenedor="intro" data-id="1tslCqrtqcPmbkvQjrZNAWcRw61TtcuSq" data-titulo="01.0 - JAVA HISTORIA" href="#" target="_blank">
+                <i class="bi bi-journal-text me-2 text-info"></i>01.0 - JAVA HISTORIA
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="tema-link text-decoration-none" data-contenedor="intro" data-id="1KoFeYjrgmO5Ghgyd8bONkX_lynYZmVSoW9QzI6pB87I" data-titulo="01.1 - JAVA INTRODUCCIÓN" href="#" target="_blank">
+                <i class="bi bi-journal-text me-2 text-info"></i>01.1 - JAVA INTRODUCCIÓN
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="tema-link text-decoration-none" data-contenedor="intro" data-id="16jDwyvDWl_Q89anCgrhm8kbZql4X3AX9" data-titulo="01.1.1 - JAVA | INSTRUCTIVO" href="#" target="_blank">
+                <i class="bi bi-journal-text me-2 text-info"></i>01.1.1 - JAVA | INSTRUCTIVO
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="tema-link text-decoration-none" data-contenedor="intro" data-id="1IxvMP-AB0MDAqyZAfq6Eca3vEexKJKjSjqNBEWX9OaM" data-titulo="01.2 - JAVA | TIPOS DE DATOS" href="#" target="_blank">
+                <i class="bi bi-journal-text me-2 text-info"></i>01.2 - JAVA | TIPOS DE DATOS
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="tema-link text-decoration-none" data-contenedor="intro" data-id="1nCt98pN0pr92ywXYnDHA2yT-4zSDdbsy7bMRYpfDlt0" data-titulo="01.2.1 - JAVA | ¿Scanner?" href="#" target="_blank">
+                <i class="bi bi-journal-text me-2 text-info"></i>01.2.1 - JAVA | ¿Scanner?
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="tema-link text-decoration-none" data-contenedor="intro" data-id="1Yt4UAggwsS73XAPDW4Y2t4GkeynHNlNG1jQCWhK0h0k" data-titulo="01.2.2 - JAVA | ¿Random?" href="#" target="_blank">
+                <i class="bi bi-journal-text me-2 text-info"></i>01.2.2 - JAVA | ¿Random?
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Ejemplos -->
+      <div class="col-md-4 d-flex">
+        <div class="p-3 card-custom w-100">
+          <h5 class="mb-3 fw-bold">💻 Ejemplos</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a class="tema-link text-decoration-none" href="Ejemplo-Clases/HolaQuinto.java" target="_blank">
+                <i class="bi bi-code-slash me-2 text-warning"></i>Ejemplo 1: Primer Programa
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="tema-link text-decoration-none" href="Ejemplo-Clases/HolaQuinto.java" target="_blank">
+                <i class="bi bi-code-slash me-2 text-warning"></i>Ejemplo 2: Variables y Tipos
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="tema-link text-decoration-none" href="Ejemplo-Clases/ConcatenacionTexto.java" target="_blank">
+                <i class="bi bi-code-slash me-2 text-warning"></i>Ejemplo 3: Concatenación
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="tema-link text-decoration-none" href="Ejemplo-Clases/EntradaDeDatos.java" target="_blank">
+                <i class="bi bi-code-slash me-2 text-warning"></i>Ejemplo 4: Entrada de Datos
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="tema-link text-decoration-none" href="Ejemplo-Clases/Condicionales" target="_blank">
+                <i class="bi bi-code-slash me-2 text-warning"></i>Ejemplo 5: Condicionales
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="tema-link text-decoration-none" href="Ejemplo-Clases/Bucles" target="_blank">
+                <i class="bi bi-code-slash me-2 text-warning"></i>Ejemplo 6: Bucles
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tareas -->
+      <div class="col-md-4 d-flex">
+        <div class="p-3 card-custom w-100">
+          <h5 class="mb-3 fw-bold">✍️ Tareas</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a class="tema-link text-decoration-none" href="Ejemplo-Clases/HolaQuinto.java" target="_blank">
+                <i class="bi bi-pencil me-2 text-primary"></i>Ejercicio: Hola Mundo
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="tema-link text-decoration-none" data-contenedor="intro" data-id="197Jj-0qkYLfQORIxvMjSFOuFhDOM5oP1" data-titulo="PDF Ejercicios 25-03" href="#" target="_blank">
+                <i class="bi bi-file-earmark-pdf me-2 text-danger"></i>PDF Ejercicios 25-03
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sección: Conversión de Tipos de Datos -->
+<div class="accordion-section">
+<div class="accordion-header" id="conversion-header" onclick="toggleAccordion('conversion')">
+  <i class="bi bi-sliders2 me-2 text-info"></i>Conversión de Tipos de Datos | Scanner
+</div>
+  <div class="accordion-content" id="conversion">
+    <div class="row">
+      <div class="col-md-6 d-flex">
+        <div class="p-3 card-custom w-100">
+          <h5 class="mb-3 text-white fw-bold">📘 Teoría</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a class="tema-link text-decoration-none text-light" data-contenedor="conversion" data-id="1RRfFrvHuLn2hfll0lPg1hcVPLYDlNQRJ" data-titulo="Tipos de Datos y Conversiones (clase oral)" href="#" target="_blank"><i class="bi bi-journal-text me-2 text-info"></i>Tipos de Datos y Conversiones (clase oral)</a></li>
+            <li class="mb-2"><a class="tema-link text-decoration-none text-light" data-contenedor="conversion" data-id="1RRfFrvHuLn2hfll0lPg1hcVPLYDlNQRJ" data-titulo="Entrada de texto y números (observaciones prácticas)" href="#" target="_blank"><i class="bi bi-journal-text me-2 text-info"></i>Entrada de texto y números (observaciones prácticas)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex">
+        <div class="p-3 card-custom w-100">
+          <h5 class="mb-3 text-white fw-bold">💻 Ejemplos & Tareas</h5>
+          <ul class="list-unstyled">
+<li class="mb-2">
+  <a class="text-decoration-none tema-link" href="Ejemplo-Clases/Conversion_Datos/ParseoDatos.java" target="_blank">
+    <i class="bi bi-code-slash me-2 text-warning"></i>Parseo de Datos
+  </a>
+</li>
+
+<li class="mb-2">
+  <a class="text-decoration-none tema-link" href="Ejemplo-Clases/LibreriaRandom" target="_blank">
+    <i class="bi bi-dice-5 me-2 text-warning"></i>Librería Random
+  </a>
+</li>
+
+            <li class="mb-2"><a class="tema-link text-decoration-none text-light" data-contenedor="conversion" data-id="1RRfFrvHuLn2hfll0lPg1hcVPLYDlNQRJ" data-titulo="Ejercicios 27-03 (PDF)" href="#" target="_blank"><i class="bi bi-file-earmark-pdf me-2 text-danger"></i>Ejercicios 27-03 (PDF)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sección: Programación Orientada a Objetos (POO) -->
+<div class="accordion-section">
+<div class="accordion-header" id="poo-header" onclick="toggleAccordion('poo')">
+  <i class="bi bi-diagram-3 me-2 text-purple"></i>Programación Orientada a Objetos (POO)
+</div>
+  <div class="accordion-content" id="poo">
+    <div class="row">
+      <div class="col-md-6 d-flex">
+        <div class="p-3 card-custom w-100">
+          <h5 class="mb-3 text-white fw-bold">📘 Teoría</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a class="tema-link text-decoration-none text-light" data-contenedor="poo" data-id="1ehwOvbfz_Qor9xM1GPexBVoYSYJF0XY3" data-titulo="Introducción a la POO" href="#" target="_blank"><i class="bi bi-journal-text me-2 text-info"></i>Introducción a la POO</a></li>
+            <li class="mb-2"><a class="tema-link text-decoration-none text-light" data-contenedor="poo" data-id="1argteP9DzCS_erEmnzjK536YpWNIEdYfpiH7o4XjihQ" data-titulo="Ampliación teórica" href="#" target="_blank"><i class="bi bi-journal-text me-2 text-info"></i>Ampliación teórica</a></li>
+            <li class="mb-2"><a class="tema-link text-decoration-none text-light" data-contenedor="poo" data-id="1Evx7Uo6Ximd2l77SzdY7LhKYCr3EZvIvL2bH5Nh-spQ" data-titulo="¿ARREGLOS 😶?" href="#" target="_blank"><i class="bi bi-journal-text me-2 text-info"></i>¿ARREGLOS 😶?</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex">
+        <div class="p-3 card-custom w-100">
+          <h5 class="mb-3 text-white fw-bold">✍️ Tareas</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a class="tema-link text-decoration-none text-light" data-contenedor="poo" data-id="1laEHmI5n88DhCel93EacpsK955VmdSkx-mb2utGwFwU" data-titulo="Tarea: Jueves 03-04" href="#" target="_blank"><i class="bi bi-pencil me-2 text-primary"></i>Tarea: Jueves 03-04</a></li>
+            <li class="mb-2"><a class="tema-link text-decoration-none text-light" data-contenedor="poo" data-id="15biim3gGLuFIG_HryXZWvCa_wscg_OL85lJQIKMN6PI" data-titulo="Tarea: Martes 08-04" href="#" target="_blank"><i class="bi bi-pencil me-2 text-primary"></i>Tarea: Martes 08-04</a></li>
+            <li class="mb-2"><a class="tema-link text-decoration-none text-light" data-contenedor="poo" data-id="1YxbYQWg6glRYRTl_aifyswQZaplBfEeeFzDEIGYtOSE" data-titulo="Tarea: Martes 22-04" href="#" target="_blank"><i class="bi bi-pencil me-2 text-primary"></i>Tarea: Martes 22-04</a></li>
+            <li class="mb-2"><a class="tema-link text-decoration-none text-light" data-contenedor="poo" data-id="1YZeSPV1VU4IY2jWDCReYknKckNjz-4BZspQ-Dnvr8c4" data-titulo="Tarea: Martes 29-04" href="#" target="_blank"><i class="bi bi-pencil me-2 text-primary"></i>Tarea: Martes 29-04</a></li>
+            <li class="mb-2"><a class="tema-link text-decoration-none text-light" data-contenedor="poo" data-id="1FAIpQLSeERd0JAXCSpbqx87rMVQLuJcXQm72y-zvkfR9yHlr_-zvmRw" data-titulo="Parcialito - Nivel Fácil" href="#" target="_blank"><i class="bi bi-pencil me-2 text-primary"></i>Parcialito - Nivel Fácil</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<footer class="mt-5 text-center">
+  <p class="console-effect"></p>
+  <p class="footer-update">
+    🛠️ Última actualización: <strong>abril 2025</strong><br/>
+    <span class="footer-punchline">📄 Código validado. Chistes malos del profe también incluidos.</span>
+  </p>
+  <button class="easter-btn" id="easterBtn">🐣</button>
+  <p class="easter-message d-none" id="easterMessage"></p>
+</footer>
+
+
+<!-- Modal Teoría -->
+<div class="modal fade" id="modalTemaGenerico" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" id="modalDialog" style="max-width: 95vw; width: 95vw;">
+    <div class="modal-content" id="modalContent" style="color: #111; background-color: #fff;">
+      <div class="modal-header justify-content-between align-items-center flex-wrap gap-2">
+        <h5 class="modal-title text-truncate mb-1" id="modalTemaTitulo" style="max-width: 60vw; white-space: nowrap; overflow: hidden;">📘 Módulo:</h5>
+        <div class="d-flex flex-wrap justify-content-end gap-1">
+          <button class="btn btn-outline-primary btn-sm btn-mode animate-nav" id="btn-prev" title="Anterior">⏮️</button>
+          <button class="btn btn-outline-primary btn-sm btn-mode animate-nav" id="btn-next" title="Siguiente">⏭️</button>
+          <button class="btn btn-outline-secondary btn-sm btn-mode animate-nav" id="zoomInBtn" title="Zoom +">➕</button>
+          <button class="btn btn-outline-secondary btn-sm btn-mode animate-nav" id="zoomOutBtn" title="Zoom -">➖</button>
+          <button class="btn btn-outline-dark btn-sm btn-mode animate-nav" id="toggleThemeBtn" title="Cambiar tema">🌙</button>
+          <a class="btn btn-outline-success btn-sm btn-mode animate-nav" href="#" id="abrirNuevaPestana" target="_blank" title="Abrir en otra pestaña">🌐</a>
+          <button aria-label="Cerrar" class="btn-close" data-bs-dismiss="modal" id="cerrarModalBtn" type="button"></button>
+        </div>
+      </div>
+      <div class="modal-body p-3 position-relative" id="iframeWrapper" style="height: 90vh; background-color: #fff;">
+        <div class="d-flex flex-column justify-content-center align-items-center w-100 h-100" id="loader">
+          <img alt="Cargando..." id="gif-loader" src="" style="width: 200px; max-width: 90%; height: auto; animation: pulseZoom 1.8s ease-in-out;"/>
+          <div class="mt-3 text-center loading-text bg-secondary text-white rounded px-3 py-2">
+            ⏳ Cargando...
+          </div>
+        </div>
+        <iframe height="100%" id="modalTemaIframe" style="border: none; transform: scale(1); transform-origin: center center; display: none; background-color: #fff;" width="100%"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.tema-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const id = this.dataset.id;
+      const titulo = this.dataset.titulo;
+      const contenedor = this.dataset.contenedor;
+      const iframe = document.getElementById('modalTemaIframe');
+      const tituloModal = document.getElementById('modalTemaTitulo');
+      const abrirPestana = document.getElementById('abrirNuevaPestana');
+
+      iframe.src = `https://drive.google.com/file/d/${id}/preview`;
+      abrirPestana.href = `https://drive.google.com/file/d/${id}/view`;
+      tituloModal.innerHTML = `📘 ${titulo}`;
+      document.getElementById('loader').style.display = 'flex';
+      iframe.style.display = 'none';
+
+      const modal = new bootstrap.Modal(document.getElementById('modalTemaGenerico'));
+      modal.show();
+
+      iframe.onload = () => {
+        document.getElementById('loader').style.display = 'none';
+        iframe.style.display = 'block';
+      }
+    });
+  });
+</script>
+
+<script>
+  function toggleAccordion(sectionId) {
+    const section = document.getElementById(sectionId);
+    const header = document.getElementById(`${sectionId}-header`);
+    document.querySelectorAll('.accordion-content').forEach(content => {
+      if (content.id !== sectionId) {
+        content.classList.remove('show');
+        document.getElementById(`${content.id}-header`).classList.remove('active');
+      }
+    });
+    section.classList.toggle('show');
+    header.classList.toggle('active');
+    if (section.classList.contains('show')) {
+      setTimeout(() => {
+        header.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
+    }
+  }
+
+  const iframe = document.getElementById("modalTemaIframe");
+  if (iframe) {
+    const observer = new MutationObserver(() => {
+      setTimeout(() => {
+        iframe.style.margin = "auto";
+        iframe.style.display = "block";
+        iframe.style.maxWidth = "100%";
+        iframe.parentElement.scrollTo({ left: 0, behavior: "smooth" });
+      }, 10);
+    });
+    observer.observe(iframe, { attributes: true, attributeFilter: ["src"] });
+  }
+</script>
+<div id="reloj"></div>
+
+<script>
+ // Función para actualizar el reloj
+  function updateClock() {
+    const now = new Date();
+    document.getElementById('clock-hours').textContent = now.getHours().toString().padStart(2, '0');
+    document.getElementById('clock-minutes').textContent = now.getMinutes().toString().padStart(2, '0');
+    document.getElementById('clock-seconds').textContent = now.getSeconds().toString().padStart(2, '0');
+  }
+  
+  // Actualizar cada segundo
+  setInterval(updateClock, 1000);
+  updateClock(); // Llamar inmediatamente
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="consola-footer.js"></script>
+<script src="easteregg.js"></script>
+<script src="modo-tema.js"></script>
+<script src="visor-temas.js"></script>
+</body>
+</html>

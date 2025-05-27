@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Qué es un Array?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('https://i.imgur.com/ZK0bzJr.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  transition: background-image 1s ease-in-out;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+    @keyframes scrollBackground {
+      from { background-position: 0 0; }
+      to { background-position: 0 1000px; }
+    }
+
+    header {
+      background-color: #000;
+      padding: 30px 20px;
+      font-size: 20px;
+      border-bottom: 6px double #00ff99;
+      text-shadow: 2px 2px #000;
+      animation: bounceIn 1s;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.50);
+      border: 5px dotted #00ff99;
+      border-radius: 20px;
+      animation: floatUp 1.5s ease-in-out;
+    }
+
+    .inventory {
+      display: grid;
+      grid-template-columns: repeat(5, 64px);
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+      animation: zoomIn 1s ease-in;
+    }
+
+    .slot {
+      width: 64px;
+      height: 64px;
+      background: url('https://i.imgur.com/YeWf7bJ.png');
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      padding: 2px;
+      color: yellow;
+      text-shadow: 1px 1px #000;
+      transition: transform 0.3s;
+    }
+
+    .slot:hover {
+      transform: scale(1.2) rotate(5deg);
+    }
+
+    pre {
+      background: #111;
+      padding: 20px;
+      text-align: left;
+      overflow-x: auto;
+      font-size: 12px;
+      border: 2px solid #00ff99;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .highlight {
+      background-color: #222;
+      color: #c6e20f;
+      padding: 8px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .glow {
+      color: #fdfbfe;
+      text-shadow: 0 0 5px #020202, 0 0 70px #c7dc0d;
+    }
+
+    .minecraft-img {
+      margin-top: 15px;
+      width: 80px;
+      animation: floatUp 2s infinite alternate;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes zoomIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header class="glow">
+    💾 ¿QUÉ ES UN ARRAY EN JAVA? 💾
+  </header>
+
+  <div class="section">
+    <p>Un <span class="highlight">array</span> es como un <strong>cofre de Minecraft </strong> donde podés guardar varios ítems en distintas casillas.</p>
+
+    <img id="cofre-cerrado" class="minecraft-img" src="https://i.gifer.com/H3oS.gif" 
+    alt="Cofre cerrado Minecraft" 
+    style="width: 150px; cursor: pointer; animation: floatUp 2s infinite alternate;" 
+    onclick="abrirCofre()">
+
+<img id="cofre-abierto" class="minecraft-img" src="https://cdn.apexminecrafthosting.com/img/uploads/2022/09/21194643/ChestSort_Plugin_Hotkey_Example.gif" 
+    alt="Cofre abierto Minecraft" 
+    style="width: 300px; max-width: 90%; margin-top: 15px; display: none; animation: floatUp 2s infinite alternate;" 
+    onclick="cerrarCofre()">
+    <script>
+      function abrirCofre() {
+    document.getElementById('cofre-cerrado').style.display = 'none';
+    document.getElementById('cofre-abierto').style.display = 'inline';
+    document.getElementById('cofre-sonido').play();
+  }
+
+  function cerrarCofre() {
+    document.getElementById('cofre-abierto').style.display = 'none';
+    document.getElementById('cofre-cerrado').style.display = 'inline';
+  }
+    </script>
+    <p>Cada casilla tiene una <span class="highlight">posición (índice)</span>, y todas las casillas son del mismo tipo (¡como slots de objetos!).</p>
+
+    <h3 class="glow">🎮 Inventario estilo Minecraft:</h3>
+    <div class="inventory">
+      <div class="slot">Espada</div>
+      <div class="slot">Pico</div>
+      <div class="slot">Pan</div>
+      <div class="slot">Antorcha</div>
+      <div class="slot">Vacio</div>
+    </div>
+
+    <h3 class="glow">💻 Código en Java:</h3>
+    <pre><code>String[] inventario = new String[5];
+inventario[0] = "Espada";
+inventario[1] = "Pico";
+inventario[2] = "Pan";
+inventario[3] = "Antorcha";
+inventario[4] = "Vacio";</code></pre>
+
+<p>Para mostrar un objeto en consola:</p> <pre><code>System.out.println(inventario[2]); // Imprime: Pan</code></pre> <p>También podés usar una ventana emergente con <code>JOptionPane</code> para mostrar el mismo dato, lo que hace más interactiva la experiencia:</p> 
+<pre><code>import javax.swing.JOptionPane;
+    JOptionPane.showMessageDialog(null, inventario[2]); // Muestra "Pan" en una ventana</code></pre>
+    
+    <p>Esta opción es útil si estás trabajando con interfaces gráficas o querés que tu programa se vea más visual y atractivo para el usuario. 😉</p>
+
+  </div>
+
+  <div class="section">
+    <h3 class="glow">🔧 Otras formas de crear un array</h3>
+    <p>También podés crearlo directamente con los datos:</p>
+    <pre><code>String[] herramientas = {"Espada", "Pico", "Hacha"};</code></pre>
+
+    <p>O usando la sintaxis con tipo var (desde Java 10):</p>
+    <pre><code>var items = new String[]{"Pan", "Antorcha", "Escudo"};</code></pre>
+
+    <p class="highlight">✨ Hay muchas formas de construir un array, ¡elegí la que mejor se adapte a tu aventura!</p>
+  </div>
+
+  <div class="section">
+    <h3 class="glow">🧭 Recorrer un Array </h3>
+    <p>Si querés ver qué hay en cada casilla de tu inventario (array), podés usar un bucle FOR clásico junto con la propiedad .length:</p>
+  
+    <pre><code>String[] inventario = {"Espada", "Pan", "Antorcha"};
+  
+  for (int i = 0; i &lt; inventario.length; i++) {
+      System.out.println("Slot " + i + ": " + inventario[i]);
+  }</code></pre>
+  
+    <p>Esto imprimirá cada objeto en tu inventario uno por uno. Si querés que aparezca en una ventana emergente, podés usar JOptionPane:</p>
+  
+    <pre><code>import javax.swing.JOptionPane;
+  
+  for (int i = 0; i &lt; inventario.length; i++) {
+      JOptionPane.showMessageDialog(null, "Slot " + i + ": " + inventario[i]);
+  }</code></pre>
+  
+    <p class="highlight">🔄 Usar .length te permite recorrer cualquier array sin importar cuántos elementos tenga.</p>
+  </div>
+  
+  <script>
+    const fondos = ['https://pa1.aminoapps.com/6442/17ade36dfa762e6f0f4ac1e30980c2790566b171_hq.gif',
+        'https://media.giphy.com/media/JpqOl1Csvud9KxulDF/giphy.gif?cid=ecf05e47tkqv4v7sb9ay3x8xtujb9umtted1ll3z1fe2yruf&ep=v1_gifs_related&rid=giphy.gif&ct=g',
+    'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGwwbWpjdTZ1YXp4ZHppcm9oc3NsaHMzMzBxYjBxYnJvZWhvZmxkbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/23aGwUUcFSfPKdhBzT/giphy.gif',
+      'https://media.giphy.com/media/MNTCP0IDV1bseiqzKU/giphy.gif?cid=ecf05e47uizsettnjwig0368a5rsd8jylktbve1mxatkse19&ep=v1_gifs_related&rid=giphy.gif&ct=g',
+      'https://media.giphy.com/media/tFbWbV3Yy9XULtCYOB/giphy.gif',
+      'https://media.giphy.com/media/UV3XPDtyr68ms9X1Rq/giphy.gif',
+      
+    ];
+  
+    let index = 0;
+  
+    // Establecer fondo inicial
+    document.body.style.backgroundImage = `url('${fondos[index]}')`;
+  
+    // Cambiar fondo cada 60 segundos
+    setInterval(() => {
+      index = (index + 1) % fondos.length;
+      document.body.style.backgroundImage = `url('${fondos[index]}')`;
+    }, 60000);
+  
+    // Ajustar tamaño de gifs una vez cargado el DOM
+    window.addEventListener('DOMContentLoaded', () => {
+      const gifs = document.querySelectorAll(".minecraft-img");
+      gifs.forEach(gif => {
+        gif.style.width = "300px";
+        gif.style.maxWidth = "90%";
+        gif.style.height = "auto";
+      });
+    });
+  
+    // Función para el cofre interactivo
+    function abrirCofre() {
+      document.getElementById('cofre-cerrado').style.display = 'none';
+      document.getElementById('cofre-abierto').style.display = 'inline';
+      document.getElementById('cofre-sonido').play();
+    }
+  </script>
+</body>
+</html>
